@@ -1,2 +1,4 @@
 # grit-lab
-Daily coding from grit:lab. Some of the exercises, challenges, and small builds on the way to specializing in AI/RAG.
+
+Daily coding practice and exercises from grit:lab (Åland Islands, 2-year project-based program, no teachers, no classes). This is the unpolished training
+log. My main portfolio work lives in separate pinned repos.
