@@ -21,7 +21,7 @@ def insert_at_beginning(head, data):    # this function takes current ehead and 
     new_node.next = head
     return new_node
     
-# testa 
+# testa.
 head = node_1
 new_head = insert_at_beginning(head, 0)
 
