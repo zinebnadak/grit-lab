@@ -1,8 +1,3 @@
-# python class vd @Dataclass
-# __init__ is a "constructure", when you run the program python immidiatley looks for anmethod called __init__ on the class
-# .data and -next is both attributes, and to assign a value to them we use node_x.attribute = value
-# when printing we need to print with .data to accec the actual values of the node and not the memory adress
-
 class Node:
     def __init__(self,data):
         self.data = data 
@@ -17,4 +12,13 @@ node_3 = Node(15)
 node_1.next = node_2
 node_2.next = node_3
 
-print(head.data, node_2.data, node_3.data)
+# Hela poängen med en länkad lista är att du inte har en extern lista med alla noder 
+# ,du har bara head, och måste ta dig vidare via .next för att hitta nästa nod.
+
+# Kolla None-villkoret på node-variabeln själv, inte på node.next, och gör kollen innan du printar
+
+current_node = head # start at head 
+
+while current_node != None: # continue until node.next is None
+    print(current_node.data) # print its actuall content
+    current_node = current_node.next # update the value of "node"
