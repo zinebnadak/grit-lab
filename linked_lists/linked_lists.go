@@ -2,16 +2,22 @@
 package main
 import "fmt"
 
-// nil i Go, None i Python
-// define new type with "type"
-// Node is the name of the type 
-// struct to define the structure of the type. Inside the attribute names you want the type to have and the Go types they are 
-// no __init__ instructor needed
-// this is just a declaration and does not need to be inside func main()
-
 type Node struct {
 	data int 
 	next *Node 
+}
+
+// function for inserting 
+func add_to_end (head *Node, value int) *Node {
+	new_node := &Node{data: value, next: nil}
+
+	current := head 
+	for current.next != nil { // OBS: här VILL vi kolla .next, till skillnad från print-loopen!
+	current = current.next
+	}
+
+	current.next = new_node
+	return head // returnera hela listan igen med start fån head
 }
 
 
@@ -24,8 +30,10 @@ func main () {
 	head := node_1
 	current_node := head
 
-	// for-loop in GO: 
-	for current_node != nil { // current_node istället för current_node.next pga off-by-one buggen
+	head = add_to_end(head, 20) // enkelt anrop, ingen loop behövs här
+
+	// traversera och skriv ut hela listan för att verifiera
+	for current_node != nil {
 		fmt.Println(current_node.data)
 		current_node = current_node.next
 	}
