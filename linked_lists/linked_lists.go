@@ -16,7 +16,6 @@ type Node struct {
 
 
 func main () {
-
 	// creating an instans of a Node this way
 
 	node_3 := &Node{data: 15,next: nil}
@@ -30,12 +29,10 @@ func main () {
 	// &-operatorn: tar ett hus (en struct) och ger dig adressen till det (struct -> pekare)
 	// *-operatorn (dereferensering): gör tvärtom ,tar en adress (pekare) och ger dig huset som ligger där (pekare -> struct)
 
-	fmt.Println(node_1)
-	fmt.Println(*node_1)
+	fmt.Println(node_1.data)
 	
-	fmt.Println(node_2) // en adress skapad med &
-	fmt.Println(*node_2) // en pekare skriver ut structen
+	fmt.Println(node_2.data) // en adress skapad med &
 
-	fmt.Println(node_3)
-	fmt.Println(*node_3)
+	fmt.Println(node_3.data)
+	
 }
