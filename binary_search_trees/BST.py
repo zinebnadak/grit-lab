@@ -1,3 +1,6 @@
+# Regel för in-order: vänster → nod → höger.
+
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -33,3 +36,14 @@ class BST:
                 return True
             current = current.left if data < current.data else current.right
         return False
+
+    def in_order(self, node=None, result=None):
+    if node is None and result is None:
+        node = self.root
+        result = []
+    if node is None:
+        return result
+    self.in_order(node.left, result)
+    result.append(node.data)
+    self.in_order(node.right, result)
+    return result
