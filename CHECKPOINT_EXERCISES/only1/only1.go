@@ -1,4 +1,4 @@
-package main // marks this file as belonging to an executable program (not a library) , main is the special package name Go looks for
+package main // marks this file as belonging to an executable program (not a library), function needs to be named main 
 
 import "fmt" // Println lives in the fmt package
 

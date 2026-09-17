@@ -1,0 +1,2 @@
+def onlya():
+    print("a")
